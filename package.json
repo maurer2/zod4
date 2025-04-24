@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node --experimental-transform-types --disable-warning=ExperimentalWarning './index.ts'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:debug": "node --experimental-transform-types --disable-warning=ExperimentalWarning --inspect-brk './index.ts'"
   },
   "author": "",
   "license": "ISC",

@@ -4,6 +4,7 @@
   "middleNames": null,
   "phoneNumber": "+41123456",
   "email": "gilbert@sullivan.co.uk",
-  "street": "1 Drury Lane",
+  "street": "1a Drury Lane",
+  "city": "London",
   "checkbox": "checked"
 }
