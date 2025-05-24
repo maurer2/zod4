@@ -1,11 +1,11 @@
 import * as emoji from 'node-emoji';
-import * as z from 'zod';
+import { z } from 'zod/v4';
 
 import inputFile from './input.json' with { type: 'json' };
 
 z.config(z.locales.en());
 
-const schema = z.strictInterface({
+const schema = z.strictObject({
   firstName: z
     .string({
       error: (issue) => {
@@ -58,9 +58,9 @@ const schema = z.strictInterface({
   }),
   city: z.string().nonempty({ error: () => 'city is invalid' }),
   // https://stackoverflow.com/questions/164979/regex-for-matching-uk-postcodes
-  // postCode: z.regex(new RegExp(/^([A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2}|GIR ?0A{2})$/), {
-  //   error: () => 'postCode is invalid',
-  // }),
+  postCode: z.string().regex(new RegExp(/^([A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2}|GIR ?0A{2})$/), {
+    error: () => 'postCode is invalid',
+  }),
   checkbox: z.boolean().or(
     z.stringbool({
       truthy: ['true', 'checked'],
@@ -80,6 +80,12 @@ try {
   console.log(JSON.stringify(result, null, 4));
 } catch (error: unknown) {
   console.log('Fail', emoji.get('cat'), '\n');
+
+  // @ts-expect-error https://github.com/microsoft/TypeScript/issues/60787
+  if (Error.isError(error)) {
+    // @ts-expect-error
+    console.log(error.message);
+  }
 
   if (error instanceof z.ZodError) {
     // const additionalError = {

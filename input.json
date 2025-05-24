@@ -6,5 +6,6 @@
   "email": "gilbert@sullivan.co.uk",
   "street": "1a Drury Lane",
   "city": "London",
+  "postCode": "W1 1AA",
   "checkbox": "checked"
 }

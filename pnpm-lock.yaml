@@ -21,8 +21,8 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
       zod:
-        specifier: 4.0.0-beta.20250420T053007
-        version: 4.0.0-beta.20250420T053007
+        specifier: 3.25.28
+        version: 3.25.28
 
 packages:
 
@@ -97,9 +97,6 @@ packages:
       svelte:
         optional: true
 
-  '@zod/core@0.8.1':
-    resolution: {integrity: sha512-djj8hPhxIHcG8ptxITaw/Bout5HJZ9NyRbKr95Eilqwt9R0kvITwUQGDU+n+MVdsBIka5KwztmZSLti22F+P0A==}
-
   char-regex@1.0.2:
     resolution: {integrity: sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==}
     engines: {node: '>=10'}
@@ -162,8 +159,8 @@ packages:
     resolution: {integrity: sha512-yLSH4py7oFH3oG/9K+XWrz1pSi3dfUrWEnInbxMfArOfc1+33BlGPQtLsOYwvdMy11AwUBetYuaRxSPqgkq+8g==}
     engines: {node: '>=4'}
 
-  zod@4.0.0-beta.20250420T053007:
-    resolution: {integrity: sha512-5pp8Q0PNDaNcUptGiBE9akyioJh3RJpagIxrLtAVMR9IxwcSZiOsJD/1/98CyhItdTlI2H91MfhhLzRlU+fifA==}
+  zod@3.25.28:
+    resolution: {integrity: sha512-/nt/67WYKnr5by3YS7LroZJbtcCBurDKKPBPWWzaxvVCGuG/NOsiKkrjoOhI8mJ+SQUXEbUzeB3S+6XDUEEj7Q==}
 
 snapshots:
 
@@ -243,8 +240,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@zod/core@0.8.1': {}
-
   char-regex@1.0.2: {}
 
   debug@4.4.0:
@@ -284,6 +279,4 @@ snapshots:
 
   unicode-emoji-modifier-base@1.0.0: {}
 
-  zod@4.0.0-beta.20250420T053007:
-    dependencies:
-      '@zod/core': 0.8.1
+  zod@3.25.28: {}
