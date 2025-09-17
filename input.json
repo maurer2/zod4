@@ -7,5 +7,6 @@
   "street": "1a Drury Lane",
   "city": "London",
   "postCode": "W1 1AA",
-  "checkbox": "checked"
+  "password": "Password",
+  "requiresPassword": "checked"
 }

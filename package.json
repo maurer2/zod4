@@ -15,8 +15,8 @@
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@typescript/native-preview": "7.0.0-dev.20250917.1",
     "node-emoji": "^2.2.0",
-    "prettier": "^3.5.3",
-    "typescript": "^5.8.3",
-    "zod": "3.25.28"
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "zod": "4.1.9"
   }
 }
