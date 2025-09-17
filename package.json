@@ -5,13 +5,15 @@
   "type": "module",
   "scripts": {
     "start": "node --experimental-transform-types --disable-warning=ExperimentalWarning './index.ts'",
-    "start:debug": "node --experimental-transform-types --disable-warning=ExperimentalWarning --inspect-brk './index.ts'"
+    "start:debug": "node --experimental-transform-types --disable-warning=ExperimentalWarning --inspect-brk './index.ts'",
+    "test:types": "npx tsgo --noEmit"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@typescript/native-preview": "7.0.0-dev.20250917.1",
     "node-emoji": "^2.2.0",
     "prettier": "^3.5.3",
     "typescript": "^5.8.3",

@@ -97,6 +97,45 @@ packages:
       svelte:
         optional: true
 
+  '@typescript/native-preview-darwin-arm64@7.0.0-dev.20250917.1':
+    resolution: {integrity: sha512-A12AsDzGThktoWb6gdFSU1dRiFNzjgo32ZdVUn8fz5B7njLkjn4vDonhgOMaAIqZHqhMmMdBmjnLJkEkGlp4uw==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@typescript/native-preview-darwin-x64@7.0.0-dev.20250917.1':
+    resolution: {integrity: sha512-OLy8yCnWYR8yhnDYJ0mdJA0SkE1uZKNOfbPZ2YQNdHcqmVjEP5XYEuchK++LHfT65pQONSubIl/VGuKLAAtKLw==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@typescript/native-preview-linux-arm64@7.0.0-dev.20250917.1':
+    resolution: {integrity: sha512-KzNYuAf1Q9nBw44Gf/jzADEh+jWxtuSHvhKsUggjkYvO4zZGCDZKRYMYcJ71/1vk3HOSz+wkplC+IZCaovMSfA==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@typescript/native-preview-linux-arm@7.0.0-dev.20250917.1':
+    resolution: {integrity: sha512-YXDkSh+zRRowU+ZFLYRNo1Wv/gEbn5bzW5Iy4wvoz0weBbbNjqU0oGldLlp6eNF2CxSshjtG+LnmzNWppdOrCg==}
+    cpu: [arm]
+    os: [linux]
+
+  '@typescript/native-preview-linux-x64@7.0.0-dev.20250917.1':
+    resolution: {integrity: sha512-8t48rWMY3Z9lHJ6+pl4DOMxb7KLWgSozsAo7RTekLUF+VwpBoOH3/4OtqTpLM3YzRh25odvEnbyJjvgpKc029Q==}
+    cpu: [x64]
+    os: [linux]
+
+  '@typescript/native-preview-win32-arm64@7.0.0-dev.20250917.1':
+    resolution: {integrity: sha512-f32sqTNywcUhV93OHDc+5c7jCCL9KwSbzQlmD5PQU6X/Saz7z0wNQWORu5UXXkG6XppirEueEFigX2XoKLSJfg==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@typescript/native-preview-win32-x64@7.0.0-dev.20250917.1':
+    resolution: {integrity: sha512-KWLt1u2N/MPS7fAENxbJOCiDgAx2CYUCL8QGumts+6ux1gVkAYPeJRCORnbJrLyh8ZxAf9CMXSONqIpqjuaqTQ==}
+    cpu: [x64]
+    os: [win32]
+
+  '@typescript/native-preview@7.0.0-dev.20250917.1':
+    resolution: {integrity: sha512-7on2ol2JN6PZpLaIYu6SRlnakkrmzzq32qTa+2gLpwDRxAubXTMd5637rRvA4JkTJHu/KtDwWaTDtpdqNB83FA==}
+    hasBin: true
+
   char-regex@1.0.2:
     resolution: {integrity: sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==}
     engines: {node: '>=10'}
@@ -239,6 +278,37 @@ snapshots:
       prettier: 3.5.3
     transitivePeerDependencies:
       - supports-color
+
+  '@typescript/native-preview-darwin-arm64@7.0.0-dev.20250917.1':
+    optional: true
+
+  '@typescript/native-preview-darwin-x64@7.0.0-dev.20250917.1':
+    optional: true
+
+  '@typescript/native-preview-linux-arm64@7.0.0-dev.20250917.1':
+    optional: true
+
+  '@typescript/native-preview-linux-arm@7.0.0-dev.20250917.1':
+    optional: true
+
+  '@typescript/native-preview-linux-x64@7.0.0-dev.20250917.1':
+    optional: true
+
+  '@typescript/native-preview-win32-arm64@7.0.0-dev.20250917.1':
+    optional: true
+
+  '@typescript/native-preview-win32-x64@7.0.0-dev.20250917.1':
+    optional: true
+
+  '@typescript/native-preview@7.0.0-dev.20250917.1':
+    optionalDependencies:
+      '@typescript/native-preview-darwin-arm64': 7.0.0-dev.20250917.1
+      '@typescript/native-preview-darwin-x64': 7.0.0-dev.20250917.1
+      '@typescript/native-preview-linux-arm': 7.0.0-dev.20250917.1
+      '@typescript/native-preview-linux-arm64': 7.0.0-dev.20250917.1
+      '@typescript/native-preview-linux-x64': 7.0.0-dev.20250917.1
+      '@typescript/native-preview-win32-arm64': 7.0.0-dev.20250917.1
+      '@typescript/native-preview-win32-x64': 7.0.0-dev.20250917.1
 
   char-regex@1.0.2: {}
 
