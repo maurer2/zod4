@@ -8,5 +8,6 @@
   "city": "London",
   "postCode": "W1 1AA",
   "password": "Password",
-  "requiresPassword": "checked"
+  "requiresPassword": "checked",
+  "dob": "1900-01-01T09:00:00.000Z"
 }

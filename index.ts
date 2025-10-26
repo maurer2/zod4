@@ -89,6 +89,11 @@ const schema = z
         },
       })
       .nullable(),
+    // https://colinhacks.com/essays/introducing-zod-codecs
+    dob: z.codec(z.iso.datetime(), z.date(), {
+      decode: (isoString) => new Date(isoString),
+      encode: (date) => date.toISOString(),
+    }),
   })
   // https://zod.dev/api?id=when
   // https://github.com/colinhacks/zod/issues/4598#issuecomment-3047547647
@@ -113,11 +118,21 @@ const schema = z
     },
   });
 
+const dobSchema = schema.pick({ dob: true });
+
 type SchemaIn = z.input<typeof schema>;
 type Schema = z.output<typeof schema>;
 
 try {
   const result = schema.parse(inputFile);
+
+  const dobDecoded = dobSchema.safeDecode({ dob: inputFile.dob });
+  console.log(dobDecoded.data?.dob instanceof Date);
+
+  if (dobDecoded.success) {
+    const dobEncoded = dobSchema.safeEncode({ dob: dobDecoded.data?.dob });
+    console.log(typeof dobEncoded.data?.dob);
+  }
 
   console.log('Success', emoji.get('cat'));
   console.log(JSON.stringify(result, null, 4));
